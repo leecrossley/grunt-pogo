@@ -21,13 +21,13 @@ I'm not a massive fan of transpilers (*understatement?*) but I'd rather use Pogo
 
 The **grunt-pogo** plugin requires Grunt `~0.4.x`
 
-### Install as a dev dependency
+#### Install as a dev dependency
 
 ```shell
 npm install grunt-pogo --save-dev
 ```
 
-### Load "grunt-pogo" in your Gruntfile.js
+#### Load "grunt-pogo" in your Gruntfile.js
 
 ```js
 grunt.loadNpmTasks("grunt-pogo");
