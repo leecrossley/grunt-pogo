@@ -3,16 +3,17 @@ module.exports = function (grunt) {
         jshint: {
             all: [
                 "*.js",
+                "tasks/*.js",
                 "<%= nodeunit.tests %>"
             ]
         },
         clean: {
-            output: ["specs/output/*"]
+            output: ["specs/pogo-result.js"]
         },
         pogo: {
             compile: {
                 files: {
-                    "specs/output/pogo-sample.js": ["specs/pogo-sample.pogo"]
+                    "specs/pogo-result.js": ["specs/pogo-sample.pogo"]
                 }
             }
         },
