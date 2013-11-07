@@ -1,0 +1,36 @@
+{
+  "name": "grunt-pogo",
+  "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
+  "description": "**WIP** A grunt plugin to compile your PogoScript to JavaScript",
+  "homepage": "http://ilee.co.uk",
+  "version": "0.0.0",
+  "main": "Gruntfile.js",
+  "keywords": [
+    "grunt-pogo",
+    "pogo",
+    "pogoscript",
+    "gruntplugin",
+    "compile",
+    "transpile"
+  ],
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leecrossley/grunt-pogo.git"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.x",
+    "grunt-contrib-nodeunit": "~0.2.x",
+    "grunt-contrib-clean": "~0.5.x",
+    "grunt-contrib-internal": "~0.4.x",
+    "grunt-contrib-jshint": "~0.7.x"
+  },
+  "dependencies": {
+    "pogo": "~0.4.x"
+  }
+}
