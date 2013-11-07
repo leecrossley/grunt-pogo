@@ -6,12 +6,14 @@ module.exports = function(grunt) {
 
     grunt.registerMultiTask("pogo", "Compile PogoScript to JavaScript", function() {
         var task = this,
-            compilationResult;
+            compilationResult,
+            destination;
         task.files.forEach(function (files) {
+            destination = files.dest;
             files = getSrcFiles(files);
             compilationResult = concatCompilation(files);
-            //grunt.file.write(files.dest, compilationResult);
-            grunt.log.writeln("Compiled" + files.dest);
+            grunt.file.write(destination, compilationResult);
+            grunt.log.writeln("Compiled: " + destination);
         });
     });
 
@@ -23,12 +25,10 @@ module.exports = function(grunt) {
 
     var concatCompilation = function (files) {
         var contents;
-        var result = files.map(function(filepath) {
+        return files.map(function(filepath) {
             contents = grunt.file.read(filepath);
             return compilePogo(contents, filepath);
         }).join(grunt.util.normalizelf(grunt.util.linefeed));
-        grunt.log.writeln(result);
-        return result;
     };
 
     var compilePogo = function(contents, filepath) {

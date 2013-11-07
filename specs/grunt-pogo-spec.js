@@ -16,9 +16,9 @@ exports.pogo = {
         test.expect(1);
 
         var expected = readFile("specs/pogo-expected.js"),
-            actual = readFile("specs/pogo-actual.js");
+            result = readFile("specs/pogo-result.js");
 
-        test.equal(expected, actual, "Should match expected compilation result");
+        test.equal(expected, result, "Should match expected compilation result");
         test.done();
     }
 };
