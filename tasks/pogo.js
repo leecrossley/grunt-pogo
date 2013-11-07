@@ -1,46 +1,35 @@
 var path = require("path"),
-    pogo = require("pogo");
+    pogo = require("pogo"),
+    λ = require("functional.js");
 
 module.exports = function(grunt) {
     "use strict";
 
     grunt.registerMultiTask("pogo", "Compile PogoScript to JavaScript", function() {
-        var task = this,
-            compilationResult,
-            destination;
-        task.files.forEach(function (files) {
-            destination = files.dest;
-            files = getSrcFiles(files);
-            compilationResult = concatCompilation(files);
-            grunt.file.write(destination, compilationResult);
-            grunt.log.writeln("Compiled: " + destination);
-        });
+        processFiles(this.files);
     });
 
-    var getSrcFiles = function (files) {
-        return files.src.filter(function(filepath) {
-            return grunt.file.exists(filepath);
-        });
-    };
+    var processFiles = λ.each(function (files) {
+        var compiled = compile(exists(files.src)),
+            combined = compiled.join(grunt.util.normalizelf(grunt.util.linefeed));
+        grunt.file.write(files.dest, combined);
+        grunt.log.writeln("Compiled: " + files.dest);
+    });
 
-    var concatCompilation = function (files) {
-        var contents;
-        return files.map(function(filepath) {
-            contents = grunt.file.read(filepath);
-            return compilePogo(contents, filepath);
-        }).join(grunt.util.normalizelf(grunt.util.linefeed));
-    };
+    var exists = λ.select(function (file) {
+        return grunt.file.exists(file);
+    });
 
-    var compilePogo = function(contents, filepath) {
-        // TODO allow the user to flesh out the options
-        var options = {
-            filename: filepath
-        };
+    var compile = λ.map(function (src) {
+        return compilePogo(grunt.file.read(src));
+    });
+
+    var compilePogo = function(contents) {
         try {
-            return pogo.compile(contents, options);
+            return pogo.compile(contents);
         } catch (e) {
             grunt.log.error("PogoScript exception: " + e);
-            grunt.fail.warn("Compile failed.");
+            grunt.fail.warn("Compilation failed.");
         }
     };
 };
