@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     var getSrcFiles = function (files) {
         return files.src.filter(function(filepath) {
-            return !grunt.file.exists(filepath);
+            return grunt.file.exists(filepath);
         });
     };
 
