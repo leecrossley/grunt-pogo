@@ -1,9 +1,9 @@
 {
   "name": "grunt-pogo",
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
-  "description": "**WIP** A grunt plugin to compile your PogoScript to JavaScript",
+  "description": "A grunt plugin to compile your PogoScript to JavaScript",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "Gruntfile.js",
   "keywords": [
     "grunt-pogo",
