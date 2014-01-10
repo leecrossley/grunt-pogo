@@ -1,0 +1,7 @@
+v0.1.4:
+  date: 2014-01-10
+  changes:
+    - Fix peer dependencies
+    - Add AUTHORS which is now required
+    - Add CHANGELOG which is now required
+    - Update jshint version to 0.8
