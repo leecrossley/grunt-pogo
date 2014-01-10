@@ -1,4 +1,4 @@
-# grunt-pogo v0.1.4 [![Build Status](git@github.com:leecrossley/grunt-pogo.git.png?branch=master)](git@github.com:leecrossley/grunt-pogo.git)
+# grunt-pogo v0.1.4 [![Build Status](https://travis-ci.org/leecrossley/grunt-pogo.png?branch=master)](https://travis-ci.org/leecrossley/grunt-pogo) [![npm version](https://badge.fury.io/js/grunt-pogo.png)](https://npmjs.org/package/grunt-pogo) [![Dependency Status](https://david-dm.org/leecrossley/grunt-pogo/status.png)](https://david-dm.org/leecrossley/grunt-pogo#info=dependencies) [![devDependency Status](https://david-dm.org/leecrossley/grunt-pogo/dev-status.png)](https://david-dm.org/leecrossley/grunt-pogo#info=devDependencies)
 
 > A grunt plugin to compile your PogoScript to JavaScript
 
