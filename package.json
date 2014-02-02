@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "A grunt plugin to compile your PogoScript to JavaScript",
   "homepage": "http://ilee.co.uk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "Gruntfile.js",
   "keywords": [
     "grunt-pogo",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.x",
-    "grunt-contrib-nodeunit": "~0.2.x",
+    "grunt-contrib-nodeunit": "~0.3.x",
     "grunt-contrib-clean": "~0.5.x",
     "grunt-contrib-internal": "~0.4.x",
     "grunt-contrib-jshint": "~0.8.x"
@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "pogo": "~0.6.x",
-    "functional.js": "~0.2.x"
+    "functional.js": "~0.3.x"
   }
 }
