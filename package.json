@@ -34,7 +34,7 @@
     "grunt": "~0.4.x"
   },
   "dependencies": {
-    "pogo": "~0.6.x",
+    "pogo": "~0.8.x",
     "functional.js": "~0.3.x"
   }
 }
