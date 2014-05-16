@@ -25,10 +25,10 @@
   },
   "devDependencies": {
     "grunt": "~0.4.x",
-    "grunt-contrib-nodeunit": "~0.3.x",
+    "grunt-contrib-nodeunit": "~0.4.x",
     "grunt-contrib-clean": "~0.5.x",
     "grunt-contrib-internal": "~0.4.x",
-    "grunt-contrib-jshint": "~0.8.x"
+    "grunt-contrib-jshint": "~0.10.x"
   },
   "peerDependencies": {
     "grunt": "~0.4.x"
