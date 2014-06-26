@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "pogo": "~0.8.x",
-    "functional.js": "~0.3.x"
+    "functional.js": "~0.4.x"
   }
 }
